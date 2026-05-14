@@ -1,20 +1,41 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from 'react';
+import { View, ActivityIndicator, StyleSheet } from 'react-native';
+import { useStore } from './src/store/useStore';
+import AppNavigator from './src/navigation/AppNavigator';
+import Toast from './src/components/Toast';
 
 export default function App() {
+  const initialize = useStore(s => s.initialize);
+  const isInitialized = useStore(s => s.isInitialized);
+
+  useEffect(() => {
+    initialize();
+  }, []);
+
+  if (!isInitialized) {
+    return (
+      <View style={styles.loading}>
+        <ActivityIndicator size="large" color="#4318FF" />
+      </View>
+    );
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.root}>
+      <AppNavigator />
+      <Toast />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  root: {
     flex: 1,
-    backgroundColor: '#fff',
+  },
+  loading: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#FAFBFC',
   },
 });
