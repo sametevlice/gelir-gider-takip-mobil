@@ -62,7 +62,6 @@ async function loadData() {
     user: null,
     transactions: [],
     goals: [],
-    investments: [],
     payments: [],
     totalBudget: 0,
     budgetLimits: {},
@@ -80,7 +79,6 @@ export const useStore = create((set, get) => ({
   user: null,
   transactions: [],
   goals: [],
-  investments: [],
   payments: [],
   totalBudget: 0,
   budgetLimits: {},
@@ -98,7 +96,6 @@ export const useStore = create((set, get) => ({
       user: data.user,
       transactions: data.transactions || [],
       goals: data.goals || [],
-      investments: data.investments || [],
       payments: data.payments || [],
       totalBudget: data.totalBudget || 0,
       budgetLimits: data.budgetLimits || {},
@@ -162,7 +159,6 @@ export const useStore = create((set, get) => ({
       user: null,
       transactions: [],
       goals: [],
-      investments: [],
       payments: [],
       totalBudget: 0,
       budgetLimits: {},
@@ -281,38 +277,7 @@ export const useStore = create((set, get) => ({
     });
   },
 
-  // ── Investments ────────────────────────────────────
-  setInvestments: (investments) => {
-    set((state) => {
-      saveData({ ...state, investments });
-      return { investments };
-    });
-  },
 
-  addInvestment: (inv) => {
-    set((state) => {
-      const newInv = { ...inv, id: 'i_' + Date.now() };
-      const investments = [...state.investments, newInv];
-      saveData({ ...state, investments });
-      return { investments };
-    });
-  },
-
-  deleteInvestment: (id) => {
-    set((state) => {
-      const investments = state.investments.filter(i => i.id !== id);
-      saveData({ ...state, investments });
-      return { investments };
-    });
-  },
-
-  updateInvestmentPrice: (id, newPrice) => {
-    set((state) => {
-      const investments = state.investments.map(i => i.id === id ? { ...i, currentPrice: newPrice } : i);
-      saveData({ ...state, investments });
-      return { investments };
-    });
-  },
 
   // ── Payments ───────────────────────────────────────
   setPayments: (payments) => {

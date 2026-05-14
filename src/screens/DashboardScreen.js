@@ -228,13 +228,13 @@ export default function DashboardScreen({ navigation }) {
             <Text style={styles.quickLinkArrow}>›</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.quickLink} onPress={() => navigation.navigate('Investments')} activeOpacity={0.7}>
+          <TouchableOpacity style={styles.quickLink} onPress={() => navigation.navigate('AIHealth')} activeOpacity={0.7}>
             <View style={[styles.quickLinkIcon, { backgroundColor: '#E0E7FF' }]}>
-              <Text style={{ fontSize: 20 }}>💼</Text>
+              <Text style={{ fontSize: 20 }}>🤖</Text>
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={styles.quickLinkTitle}>Yatırım Portföyü</Text>
-              <Text style={styles.quickLinkSub}>Varlıklarını takip et</Text>
+              <Text style={styles.quickLinkTitle}>AI Finansal Sağlık</Text>
+              <Text style={styles.quickLinkSub}>Detaylı analiz ve tavsiyeler</Text>
             </View>
             <Text style={styles.quickLinkArrow}>›</Text>
           </TouchableOpacity>

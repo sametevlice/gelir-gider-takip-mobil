@@ -17,7 +17,6 @@ import AddTransactionScreen from '../screens/AddTransactionScreen';
 import BudgetScreen from '../screens/BudgetScreen';
 import AnalyticsScreen from '../screens/AnalyticsScreen';
 import PaymentsScreen from '../screens/PaymentsScreen';
-import InvestmentsScreen from '../screens/InvestmentsScreen';
 import AccountScreen from '../screens/AccountScreen';
 import AIHealthScreen from '../screens/AIHealthScreen';
 
@@ -99,7 +98,6 @@ function MainStack() {
       <Stack.Screen name="MainTabs" component={HomeTabs} />
       <Stack.Screen name="AddTransaction" component={AddTransactionScreen} options={{ presentation: 'modal' }} />
       <Stack.Screen name="Payments" component={PaymentsScreen} />
-      <Stack.Screen name="Investments" component={InvestmentsScreen} />
       <Stack.Screen name="AIHealth" component={AIHealthScreen} />
     </Stack.Navigator>
 

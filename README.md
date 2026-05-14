@@ -7,8 +7,7 @@ Bu proje, kullanıcıların kişisel finanslarını yönetmelerine, harcamaları
 *   **📊 Dashboard:** Finansal durumunuzun genel özeti, toplam bakiye, gelir ve gider grafikeri.
 *   **🤖 AI Finansal Analiz:** Google Gemini AI entegrasyonu ile harcama alışkanlıklarınızın analizi ve kişiselleştirilmiş finansal tavsiyeler.
 *   **💸 İşlem Takibi:** Hızlı ve kolay bir şekilde gelir ve gider ekleme, kategorize etme.
-*   **📅 Ödemeler:** Yaklaşan faturalar ve düzenli ödemelerin takibi.
-*   **📈 Yatırımlar:** Portföy yönetimi ve varlık dağılımı görselleştirmesi.
+*   **📅 Ödemeler:** Yaklaşan faturalar ve düzenli ödemelerin takvim görünümüyle takibi.
 *   **🎯 Bütçe Yönetimi:** Kategorilere göre bütçe limitleri belirleme ve doluluk oranlarını takip etme.
 *   **🎨 Premium Tasarım:** Modern, karanlık tema destekli, cam morfizmi (glassmorphism) efektleri ve akıcı animasyonlar içeren kullanıcı arayüzü.
 

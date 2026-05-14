@@ -17,7 +17,6 @@ export default function TransactionsScreen({ navigation }) {
       .filter(t => {
         if (filter === 'INCOME') return t.type === 'INCOME';
         if (filter === 'EXPENSE') return t.type === 'EXPENSE';
-        if (filter === 'INVESTMENT') return t.type === 'INVESTMENT' || t.categoryId === 'cat13';
         return true;
       })
       .filter(t => {
@@ -34,7 +33,6 @@ export default function TransactionsScreen({ navigation }) {
     { id: 'ALL', label: 'Tümü' },
     { id: 'INCOME', label: 'Gelir' },
     { id: 'EXPENSE', label: 'Gider' },
-    { id: 'INVESTMENT', label: 'Yatırım' },
   ];
 
   return (

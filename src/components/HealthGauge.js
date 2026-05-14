@@ -21,6 +21,11 @@ export default function HealthGauge({ score = 0, size = 160 }) {
     scoreText = 'Uyarı';
     scoreBg = '#FFF7ED';
     scoreTextColor = '#EA580C';
+  } else if (normalizedScore < 85) {
+    scoreColor = '#3B82F6';
+    scoreText = 'İyi';
+    scoreBg = '#EFF6FF';
+    scoreTextColor = '#2563EB';
   }
 
   const halfWidth = size / 2;
